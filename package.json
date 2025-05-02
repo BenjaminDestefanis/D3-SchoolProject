@@ -1,0 +1,26 @@
+{
+  "name": "d3-schoolproject",
+  "version": "1.0.0",
+  "description": "💰 Monetización a futuro\r Plan gratuito para academias pequeñas (limitado a X alumnos).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminDestefanis/D3-SchoolProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminDestefanis/D3-SchoolProject/issues"
+  },
+  "homepage": "https://github.com/BenjaminDestefanis/D3-SchoolProject#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "pg": "^8.15.6"
+  }
+}
