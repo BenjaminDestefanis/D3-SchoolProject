@@ -1,11 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 30px;
-    background: #f0f4f8;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+  font-family: 'Roboto Condensed';
+}
+
+path {
+  stroke: #fff;
+  stroke-width: 0.5;
+}
+text {
   
-  svg {
-    background: white;
-    border: 1px solid #ccc;
-  }
-  
+  font-size: 12px;
+  pointer-events: none;
+}
