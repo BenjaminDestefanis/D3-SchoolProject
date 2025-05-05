@@ -3,12 +3,49 @@
   font-family: 'Roboto Condensed';
 }
 
-path {
-  stroke: #fff;
-  stroke-width: 0.5;
+body {
+  margin: 0;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
 }
-text {
-  
-  font-size: 12px;
-  pointer-events: none;
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+#chart {
+  width: 70%;
+  height: 100%;
+}
+
+#sidebar {
+  width: 30%;
+  padding: 20px;
+  background-color: #252525;
+  border-left: 1px solid #444;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#close-sidebar {
+  background: none;
+  border: none;
+  color: #f0f0f0;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+code {
+  display: block;
+  padding: 10px;
+  background-color: #333;
+  color: #4CAF50; /* Verde terminal */
+  margin: 10px 0;
 }

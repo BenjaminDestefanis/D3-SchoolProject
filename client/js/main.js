@@ -8,7 +8,8 @@
           children: [
             { name: "ls", size: 100 }, // "size" puede representar uso frecuente
             { name: "cd", size: 80 },
-            { name: "cp", size: 60 }
+            { name: "cp", size: 60 },
+            { name: "touch", size: 70},
           ]
         },
         {

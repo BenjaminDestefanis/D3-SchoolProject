@@ -1,5 +1,5 @@
 import { linuxCommands } from './data.js';
-//const linuxCommands = require("./sidebar")
+import { updateSidebar } from './sidebar.js';
 
 const width = 700, height = 700;
 const radius = Math.min(width, height) / 2;
