@@ -15,6 +15,12 @@ export const linuxCommands = {
             size: 80,
             description: "Cambia de directorio",
             example: "cd /var/www" 
+          },
+          {
+            name: "touch",
+            size: 50,
+            description: "Crea archivos",
+            example: "touch my_note.txt"
           }
         ]
       },

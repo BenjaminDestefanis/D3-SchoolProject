@@ -24,15 +24,30 @@ partition(root);
 // Colores por categoría
 const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, linuxCommands.children.length + 1));
 
-// Dibuja el Sunburst
+// Dibuja el Sunburst (arcos)
 svg.selectAll("path")
   .data(root.descendants())
   .join("path")
   .attr("d", arc)
   .attr("fill", d => d.depth === 0 ? "#333" : color(d.data.name))
+  .attr("stroke", "#1a1a1a")
+  .style("cursor", "pointer")
   .on("click", (event, d) => {
-    if (d.depth > 0) {
-      updateSidebar(d.data); // ¡Función definida en sidebar.js!
-    }
-    // Zoom (código anterior)
+    if (d.depth > 0) updateSidebar(d.data);
+    // Zoom (opcional)
   });
+
+// Dibuja las etiquetas de texto
+svg.selectAll("text")
+  .data(root.descendants().filter(d => d.depth > 0 && (d.y0 + d.y1) / 2 * (d.x1 - d.x0) > 10)) // Filtra nodos pequeños
+  .join("text")
+  .attr("transform", d => {
+    const x = (d.x0 + d.x1) / 2 * 180 / Math.PI; // Ángulo medio en grados
+    const y = (d.y0 + d.y1) / 2; // Radio medio
+    return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`; // Alinea el texto
+  })
+  .attr("dy", "0.35em") // Ajuste vertical
+  .attr("text-anchor", "middle") // Centra el texto
+  .style("font-size", "12px")
+  .style("fill", "#f0f0f0")
+  .text(d => d.data.name);
