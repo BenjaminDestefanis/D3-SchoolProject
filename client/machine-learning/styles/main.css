@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+#chart {
+  width: 100vw;
+  height: 100vh;
+}
+
+.node {
+  border: solid 1px white;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.node-label {
+  padding: 5px;
+  color: white;
+  font-size: 12px;
+  text-shadow: 0 0 3px black;
+  word-wrap: break-word;
+}
+
+.node-value {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
