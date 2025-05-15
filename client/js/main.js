@@ -1,4 +1,4 @@
-
+/* 
     
     const data = {
       name: "Linux",
@@ -101,4 +101,4 @@
     nodeGroup.append("text")
       .attr("dy", 5)
       .attr("text-anchor", "middle")
-      .text(d => d.id);
+      .text(d => d.id); */
